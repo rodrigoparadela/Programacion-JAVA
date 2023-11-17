@@ -3,46 +3,56 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        // Definir el tamaño del array para almacenar 15 nombres
-        int numNombres = 15;
-        String[] nombres = new String[numNombres];
+        /*2.Diseña un array de 20 posiciones y comprobar si es capicúa.*/
 
-        // Solicitar los nombres por pantalla
-        System.out.println("Ingrese 15 nombres:");
+        //creamos el array y pedimos los valores al usuario
 
-        // Leer los nombres y almacenarlos en el array
-        for (int i = 0; i < numNombres; i++) {
-            System.out.print("Nombre " + (i + 1) + ": ");
-            String nombre = scanner.nextLine();
+        int array[] = new int[20];
+        int num;
+        Scanner datosp = new Scanner(System.in);
+        for (int cont =0; cont< array.length;cont++){
+            System.out.println("Ingrese número: ");
+            num = datosp.nextInt();
+            array[cont] = num;
+        }
 
-            // Verificar si el nombre ya existe en el array
-            if (existeNombre(nombres, nombre)) {
-                System.out.println("Usted ya fue inscrito. Ingrese otro nombre.");
-                i--; // Decrementar el índice para volver a solicitar el mismo nombre
-            } else {
-                nombres[i] = nombre;
+
+        boolean tf;
+        int inicio = 0;
+        int fin = array.length - 1;
+
+        while (inicio < fin) {
+            if (array[inicio] != array[fin]) {
+                tf = false;
+                break;
             }
+
+            inicio++;
+            fin--;
+            tf=true;
         }
 
-        // Mostrar el array de nombres
-        System.out.println("\nArray de nombres:");
-        for (String nombre : nombres) {
-            System.out.println(nombre);
+        //Imprimimos si es capicua o no mediante el booleano tf
+
+        if (tf = true){
+            System.out.println("El array es capicua");
+        }
+        else {
+            System.out.println("El array no es capicua5");
         }
 
-        // Cerrar el scanner
-        scanner.close();
-    }
 
-    // Método para verificar si un nombre ya existe en el array
-    private static boolean existeNombre(String[] array, String nombre) {
-        for (String n : array) {
-            if (n != null && n.equalsIgnoreCase(nombre)) {
-                return true;
-            }
+        //Imprimimos el array
+        for (int cont = 0; cont < (array.length -1) ; cont ++){
+            System.out.print(array[cont] + " - ");
         }
-        return false;
+        System.out.println(array[19]);
+
+
+
+
+
+
     }
 }
