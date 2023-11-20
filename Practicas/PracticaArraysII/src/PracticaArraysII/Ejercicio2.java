@@ -17,31 +17,23 @@ public class Ejercicio2 {
             array[cont] = num;
         }
 
-
-        boolean tf;
-        int inicio = 0;
-        int fin = array.length - 1;
-
-        while (inicio < fin) {
-            if (array[inicio] != array[fin]) {
-                tf = false;
+        //Comprobamos si el array es capicua o no
+        boolean tf = true;
+        for (int cont = 0; cont <(array.length/2) ; cont++){
+            if (array[cont] != array[array.length-1-cont]){
+                tf =false;
                 break;
             }
-
-            inicio++;
-            fin--;
-            tf=true;
         }
 
-        //Imprimimos si es capicua o no mediante el booleano tf
+        //Mostramos si es capicua o no mediante una condición
 
-        if (tf = true){
-            System.out.println("El array es capicua");
+        if (tf){
+            System.out.println("Es capicua");
         }
         else {
-            System.out.println("El array no es capicua5");
+            System.out.println("No es capicua");
         }
-
 
         //Imprimimos el array
         for (int cont = 0; cont < (array.length -1) ; cont ++){
