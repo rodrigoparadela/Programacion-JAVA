@@ -26,15 +26,34 @@ public class Main {
         };
 
         //Guardamos el mayor y el menor número en dos variables int
-        int min, max;
-        for (int cont = 0; numeros[].length ;cont++){
-            for(int cont2=0;cont2< numeros[cont].length;cont++){
-
-
-
+        int min=0, max=0;
+        for (int cont=0;cont<numeros.length;cont++){
+            for (int cont2=0;cont2<numeros[cont].length;cont2++){
+                if (min >= numeros[cont][cont2]){
+                    min=numeros[cont][cont2];
+                }
+                if (max<= numeros[cont][cont2]){
+                    max=numeros[cont][cont2];
+                }
             }
-        }
 
+        }
+        //Mostramos los valores por pantalla
+        System.out.println("El menor de la matriz es: " + min);
+        System.out.println("El mayor de la matriz es: " + max);
+
+        //Imprimimos la primera y la última fila de la matriz
+        System.out.println("La primera fila de la matriz es: ");
+        for (int cont=0;cont<(numeros[0].length-1);cont++){
+            System.out.print(numeros[0][cont]+" - ");
+        }
+        System.out.println(numeros[0][numeros[0].length-1]);
+
+        System.out.println("La última fila de la matriz es: ");
+        for (int cont=0;cont<(numeros[3].length-1);cont++){
+            System.out.print(numeros[3][cont]+" - ");
+        }
+        System.out.println(numeros[3][numeros[3].length-1]);
 
     }
 }
