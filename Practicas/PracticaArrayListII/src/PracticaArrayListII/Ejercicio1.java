@@ -44,7 +44,7 @@ public class Ejercicio1 {
         num = num+1;
         System.out.println("El número de valores añadidos es: "+num);
         System.out.println("La suma de los valores añadidos es: "+ suma);
-        media = suma/num;
+        media = (double) suma/num;
         System.out.println("La media de los valores añadidos es: " +(media));
 
         //Mostramos los valores y cuantos de ellos son mayores que la media.
