@@ -66,5 +66,8 @@ public class Main {
             preciototal+=productosNop[0].Calcular(5);
         }
         System.out.println("El precio total de los productos no perecederos es: " +preciototal);
+
+
+
     }
 }
