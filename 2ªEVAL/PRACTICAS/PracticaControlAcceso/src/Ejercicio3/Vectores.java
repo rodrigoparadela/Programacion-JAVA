@@ -1,26 +1,23 @@
 package Ejercicio3;
 
 public class Vectores {
-    int[] vectorA = new int[20];
-    int[] vectorB = new int[20];
+    int vectorA;
+    int vectorB;
 
-    public Vectores(int[] vectorA, int[] vectorB){
-        this.vectorA=vectorA;
-        this.vectorB=vectorB;
+    public Vectores(){
     }
-    public int[] generarVectores(){
-        int[] vector=new int[20];
-        for (int cont=0;cont<vector.length;cont++){
-            vector[cont]=(int) (Math.random()*20)-1;
-        }
-        return vector;
+    public int generarVectores(){
+        vectorA=(int) (Math.random()*20)-1;
+        return vectorA;
     }
-    public int[] generarC(){
-        int[] vector=new int[20];
-        for (int cont=0;cont<vector.length;cont++){
-            vector[cont]=vectorA[cont]-vectorB[cont];
+    public int calcularC(int vectorA,int vectorB){
+        return vectorA+vectorB;
+    }
+    public void mostrarVectores(int[] vector){
+        for (int cont=0;cont<vector.length-1;cont++){
+            System.out.print(vector[cont]+" - ");
         }
-        return vector;
+        System.out.println(vector[vector.length-1]);
     }
     
 
