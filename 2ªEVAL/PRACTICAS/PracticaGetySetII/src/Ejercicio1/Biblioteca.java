@@ -33,7 +33,7 @@ public class Biblioteca {
 
     //Método préstamo
     public boolean prestamo(){
-        if (this.nejemplares==0){
+        if (nejemplares==0){
             return false;
         }
         else {
@@ -45,7 +45,8 @@ public class Biblioteca {
 
     //Método devolución
     public boolean devolucion(){
-        if (this.nejemplaresP==0){
+
+        if (nejemplaresP==0){
             return false;
         }
         else{
@@ -59,8 +60,11 @@ public class Biblioteca {
     public void mostrar(){
         System.out.println("Titulo: "+ titulo);
         System.out.println("Autor: " +autor);
-        System.out.println("Número de ejemplares: "+nejemplares);
+        System.out.println("Número de ejemplares: "+ nejemplares);
         System.out.println("Número de ejemplares prestados: "+nejemplaresP);
+    }
+    public void mostrarLibros(){
+
     }
 
 }
