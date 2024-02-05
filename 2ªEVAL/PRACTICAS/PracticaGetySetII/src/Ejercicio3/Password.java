@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 public class Password {
     private int longitud;
-    private String[] contraseña;
+    private String contraseña;
 
     //constructores
     public Password(){
@@ -14,12 +14,12 @@ public class Password {
         this.longitud=longitud;
         this.contraseña=generarContraseña(longitud);
     }
-    public Password(int longitud, String[] contraseña){
+    public Password(int longitud, String contraseña){
         this.longitud=longitud;
         this.contraseña=contraseña;
     }
     //getters
-    public String[] getContraseña(){return contraseña;}
+    public String getContraseña(){return contraseña;}
     public int getLongitud(){return longitud;}
     //setter para longitud
     public void setLongitud(int longitud){this.longitud=longitud;}
@@ -45,14 +45,12 @@ public class Password {
     }
     public String generarContraseña(int longitud){
         String contra="";
-        contraseña=new String[longitud];
+
         int num;
         for (int cont=0;cont<longitud;cont++){
             num=(int) (Math.random()*(9-0));
-            contraseña[cont]= String.valueOf(num);
             contra += num;
         }
-
         return contra;
     }
 

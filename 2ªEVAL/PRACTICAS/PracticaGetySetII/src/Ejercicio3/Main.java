@@ -33,8 +33,17 @@ public class Main {
                 longitud=datosp.nextInt();
                 Password contraseña1=new Password();
                 contraseña=contraseña1.generarContraseña(longitud);
-                contraseñas
+                contraseñas.add(contraseña);
+                esfuerte.add(contraseña1.esFuerte(contraseña));
+            } else{
+                System.out.println("Opción incorrecta");
+                cont--;
             }
+        }
+        //Mostramos los dos arraylist
+        for (int cont=0;cont<numcontras;cont++){
+            System.out.println("La contraseña número "+(cont+1)+" es: "+contraseñas.get(cont));
+            System.out.println("Es fuerte: "+esfuerte.get(cont));
         }
 
     }
