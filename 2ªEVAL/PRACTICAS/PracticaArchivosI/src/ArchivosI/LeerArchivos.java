@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class LeerArchivos {
     public void leerSinEsp(){
-        String ruta="C:/Users/rodri/Desktop/Programacion-JAVA/2ªEVAL/PRACTICAS/PracticaArchivosI/prueba.txt";
+        String ruta="C:/Users/Digitech Tarde/Desktop/prueba.txt";
 
         FileReader fichero=null;
 
